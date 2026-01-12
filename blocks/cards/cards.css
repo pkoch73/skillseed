@@ -25,3 +25,52 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+/* Icons variant - for feature cards with icons */
+.cards.icons > ul {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.cards.icons > ul > li {
+  border: none;
+  border-radius: 12px;
+  background-color: var(--light-color);
+  padding: 32px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cards.icons > ul > li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgb(0 0 0 / 8%);
+}
+
+.cards.icons .cards-card-body {
+  margin: 0;
+}
+
+.cards.icons .cards-card-icon {
+  font-size: 48px;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.cards.icons .cards-card-body h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: var(--heading-font-size-m);
+  color: var(--text-color);
+}
+
+.cards.icons .cards-card-body p {
+  margin: 0;
+  color: var(--dark-color);
+  font-size: var(--body-font-size-s);
+  line-height: 1.6;
+}
+
+@media (width >= 900px) {
+  .cards.icons > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
