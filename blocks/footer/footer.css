@@ -10,8 +10,38 @@ footer .footer > div {
   padding: 40px 24px 24px;
 }
 
+footer .footer .default-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
 footer .footer p {
   margin: 0;
+}
+
+/* Footer brand with logo */
+footer .footer p:first-child {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+/* Copyright text on the right */
+footer .footer p:last-child {
+  color: var(--text-secondary);
+}
+
+footer .footer img {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
 }
 
 @media (width >= 900px) {
