@@ -194,6 +194,9 @@
 }
 
 .hero.split picture {
+  position: relative;
+  z-index: 1;
+  inset: unset;
   display: block;
   width: 280px;
   height: 350px;
