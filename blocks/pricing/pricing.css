@@ -1,5 +1,20 @@
 .pricing-container {
-  background-color: var(--light-color);
+  background-color: var(--bg-card);
+  padding: 60px 0;
+}
+
+.pricing-container h2 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.pricing-container .default-content-wrapper {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.pricing-container .default-content-wrapper p {
+  color: var(--dark-color);
 }
 
 .pricing > div {
@@ -11,10 +26,11 @@
 }
 
 .pricing .pricing-card {
-  background-color: var(--background-color);
-  border-radius: 16px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
   padding: 32px;
-  box-shadow: 0 4px 16px rgb(0 0 0 / 8%);
+  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
 }
@@ -40,17 +56,21 @@
 }
 
 .pricing .pricing-tier {
-  font-size: var(--heading-font-size-m);
-  font-weight: 700;
-  margin: 0 0 8px;
-  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 12px;
+  color: var(--dark-color);
 }
 
 .pricing .pricing-price {
+  font-family: var(--heading-font-family);
   font-size: var(--heading-font-size-xl);
   font-weight: 700;
   color: var(--primary-color);
-  margin: 0 0 8px;
+  margin: 0 0 12px;
 }
 
 .pricing .pricing-price span {
@@ -98,6 +118,16 @@
   width: 100%;
   text-align: center;
   padding: 14px 24px;
+  border-radius: 28px;
+}
+
+.pricing .pricing-card:not(.featured) .pricing-cta a.button {
+  background-color: #e8e4dc;
+  color: var(--text-color);
+}
+
+.pricing .pricing-card:not(.featured) .pricing-cta a.button:hover {
+  background-color: #dcd8d0;
 }
 
 .pricing .pricing-card.featured .pricing-cta a.button {

@@ -29,15 +29,16 @@
 /* Icons variant - for feature cards with icons */
 .cards.icons > ul {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 32px;
+  gap: 24px;
 }
 
 .cards.icons > ul > li {
-  border: none;
-  border-radius: 12px;
-  background-color: var(--light-color);
-  padding: 32px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  background-color: var(--bg-card);
+  padding: 28px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cards.icons > ul > li:hover {
@@ -50,15 +51,27 @@
 }
 
 .cards.icons .cards-card-icon {
-  font-size: 48px;
-  line-height: 1;
-  margin-bottom: 16px;
+  width: 48px;
+  height: 48px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: white;
 }
 
-.cards.icons .cards-card-body h3 {
+.cards.icons .cards-card-body h3,
+.cards.icons .cards-card-body strong {
+  display: block;
   margin-top: 0;
   margin-bottom: 12px;
-  font-size: var(--heading-font-size-m);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  font-style: normal;
+  font-weight: 600;
   color: var(--text-color);
 }
 

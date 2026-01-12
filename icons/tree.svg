@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 280" fill="none">
+  <!-- Tree trunk -->
+  <rect x="90" y="180" width="20" height="100" fill="#22c55e"/>
+  
+  <!-- Tree foliage - layered circles -->
+  <circle cx="100" cy="120" r="60" fill="#166534"/>
+  <circle cx="60" cy="140" r="45" fill="#15803d"/>
+  <circle cx="140" cy="140" r="45" fill="#15803d"/>
+  <circle cx="100" cy="80" r="50" fill="#22c55e"/>
+  <circle cx="70" cy="110" r="35" fill="#16a34a"/>
+  <circle cx="130" cy="110" r="35" fill="#16a34a"/>
+  
+  <!-- Checkmark in center -->
+  <circle cx="100" cy="130" r="25" fill="white"/>
+  <path d="M88 130 L96 138 L112 122" stroke="#22c55e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- Small leaves/branches -->
+  <ellipse cx="45" cy="160" rx="8" ry="12" fill="#166534" transform="rotate(-30 45 160)"/>
+  <ellipse cx="155" cy="160" rx="8" ry="12" fill="#166534" transform="rotate(30 155 160)"/>
+</svg>
+

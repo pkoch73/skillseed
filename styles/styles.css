@@ -11,19 +11,30 @@
  */
 
 :root {
-  /* colors */
-  --background-color: white;
-  --light-color: #f0fdf4;
-  --dark-color: #6b7280;
-  --text-color: #1f2937;
-  --link-color: #22c55e;
-  --link-hover-color: #16a34a;
-  --primary-color: #22c55e;
-  --primary-dark: #16a34a;
+  /* colors - matching original design */
+  --background-color: #faf9f6;
+  --light-color: #f0ede6;
+  --dark-color: #5a5a5a;
+  --text-color: #1a1a1a;
+  --text-secondary: #5a5a5a;
+  --text-muted: #8a8a8a;
+  --link-color: #1a5d3a;
+  --link-hover-color: #0f3d26;
+  --primary-color: #1a5d3a;
+  --primary-light: #2d8a5e;
+  --primary-dark: #0f3d26;
+  --accent-color: #f5a623;
+  --bg-card: #ffffff;
+  --bg-secondary: #f0ede6;
+  --border-color: #e0ddd5;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.12);
+  --radius: 16px;
+  --radius-sm: 8px;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --body-font-family: 'Inter', roboto, roboto-fallback, sans-serif;
+  --heading-font-family: 'Outfit', sans-serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -75,7 +86,7 @@
 body {
   display: none;
   margin: 0;
-  background-color: var(--background-color);
+  background-color: var(--bg-card);
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
@@ -109,8 +120,8 @@ h6 {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
   font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
+  font-weight: 700;
+  line-height: 1.2;
   scroll-margin: 40px;
 }
 
@@ -231,7 +242,8 @@ main img {
 
 /* sections */
 main > .section {
-  margin: 40px 0;
+  margin: 0;
+  padding: 0;
 }
 
 main > .section > div {
@@ -241,7 +253,7 @@ main > .section > div {
 }
 
 main > .section:first-of-type {
-  margin-top: 0;
+  padding-top: 0;
 }
 
 @media (width >= 900px) {
@@ -251,9 +263,31 @@ main > .section:first-of-type {
 }
 
 /* section metadata */
-main .section.light,
-main .section.highlight {
-  background-color: var(--light-color);
+main .section.light {
+  background-color: var(--bg-card);
   margin: 0;
-  padding: 40px 0;
+  padding: 60px 0;
+}
+
+main .section.highlight {
+  background-color: var(--bg-card);
+  margin: 0;
+  padding: 60px 0;
+}
+
+main .section.features {
+  background-color: var(--bg-secondary);
+  margin: 0;
+  padding: 80px 0;
+}
+
+main .section.features h2 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+main .section.features > div > p:first-of-type {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 48px;
 }
