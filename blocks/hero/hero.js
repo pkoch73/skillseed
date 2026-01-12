@@ -27,33 +27,43 @@ export default function decorate(block) {
     const wrapper = document.createElement('div');
     wrapper.className = 'hero-grid';
 
+    // Get all rows from the block
     const rows = [...block.children];
 
-    // First row is text content
-    if (rows[0]) {
-      rows[0].classList.add('hero-content');
-      wrapper.appendChild(rows[0]);
+    // Find the row that contains actual content (has both text and picture)
+    let contentRow = rows.find((row) => row.querySelector('picture') || row.querySelector('h1'));
+
+    if (contentRow) {
+      const cols = [...contentRow.children];
+
+      // First column is text content
+      if (cols[0]) {
+        cols[0].classList.add('hero-content');
+        wrapper.appendChild(cols[0]);
+      }
+
+      // Second column is image content
+      if (cols[1] && cols[1].querySelector('picture')) {
+        cols[1].classList.add('hero-image-wrapper');
+
+        // Add floating tags around the image
+        const tagsContainer = document.createElement('div');
+        tagsContainer.className = 'hero-tags';
+
+        tags.forEach((tag) => {
+          const tagEl = document.createElement('span');
+          tagEl.className = `hero-tag ${tag.className}`;
+          tagEl.textContent = tag.text;
+          tagsContainer.appendChild(tagEl);
+        });
+
+        cols[1].appendChild(tagsContainer);
+        wrapper.appendChild(cols[1]);
+      }
     }
 
-    // Second row is image content
-    if (rows[1]) {
-      rows[1].classList.add('hero-image-wrapper');
-
-      // Add floating tags
-      const tagsContainer = document.createElement('div');
-      tagsContainer.className = 'hero-tags';
-
-      tags.forEach((tag) => {
-        const tagEl = document.createElement('span');
-        tagEl.className = `hero-tag ${tag.className}`;
-        tagEl.textContent = tag.text;
-        tagsContainer.appendChild(tagEl);
-      });
-
-      rows[1].appendChild(tagsContainer);
-      wrapper.appendChild(rows[1]);
-    }
-
+    // Clear block and add the wrapper
+    block.textContent = '';
     block.appendChild(wrapper);
   }
 }
