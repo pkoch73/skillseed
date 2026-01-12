@@ -142,16 +142,33 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
 /* brand */
 header .nav-brand {
   grid-area: brand;
-  flex-basis: 128px;
+  flex-basis: auto;
   font-family: var(--body-font-family);
-  font-size: var(--body-font-size-m);
+  font-size: var(--heading-font-size-s);
   font-weight: 700;
   line-height: 1;
+  color: var(--primary-color);
+}
+
+header .nav-brand a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: inherit;
 }
 
 header nav .nav-brand img {
-  width: 128px;
-  height: auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+header nav .nav-brand p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 /* sections */
