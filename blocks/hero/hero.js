@@ -39,6 +39,36 @@ export default function decorate(block) {
       // First column is text content
       if (cols[0]) {
         cols[0].classList.add('hero-content');
+
+        // Find all links and wrap them in a button container
+        const links = cols[0].querySelectorAll('a');
+        if (links.length > 0) {
+          const buttonContainer = document.createElement('div');
+          buttonContainer.className = 'button-container';
+
+          links.forEach((link, index) => {
+            // Remove the link from its parent paragraph
+            const parentP = link.closest('p');
+
+            // Add button classes
+            link.classList.add('button');
+            if (index === 0) {
+              link.classList.add('primary');
+            } else {
+              link.classList.add('secondary');
+            }
+
+            buttonContainer.appendChild(link);
+
+            // Remove empty parent paragraph if it exists
+            if (parentP && parentP.textContent.trim() === '') {
+              parentP.remove();
+            }
+          });
+
+          cols[0].appendChild(buttonContainer);
+        }
+
         wrapper.appendChild(cols[0]);
       }
 
