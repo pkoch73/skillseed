@@ -1,21 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 280" fill="none">
-  <!-- Tree trunk -->
-  <rect x="90" y="180" width="20" height="100" fill="#22c55e"/>
-  
-  <!-- Tree foliage - layered circles -->
-  <circle cx="100" cy="120" r="60" fill="#166534"/>
-  <circle cx="60" cy="140" r="45" fill="#15803d"/>
-  <circle cx="140" cy="140" r="45" fill="#15803d"/>
-  <circle cx="100" cy="80" r="50" fill="#22c55e"/>
-  <circle cx="70" cy="110" r="35" fill="#16a34a"/>
-  <circle cx="130" cy="110" r="35" fill="#16a34a"/>
-  
-  <!-- Checkmark in center -->
-  <circle cx="100" cy="130" r="25" fill="white"/>
-  <path d="M88 130 L96 138 L112 122" stroke="#22c55e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-  
-  <!-- Small leaves/branches -->
-  <ellipse cx="45" cy="160" rx="8" ry="12" fill="#166534" transform="rotate(-30 45 160)"/>
-  <ellipse cx="155" cy="160" rx="8" ry="12" fill="#166534" transform="rotate(30 155 160)"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="23 10 154 180" fill="none">
+  <path d="M100 200 L100 120" stroke="#1a5d3a" stroke-width="8" stroke-linecap="round"/>
+  <path d="M100 120 L70 90" stroke="#1a5d3a" stroke-width="6" stroke-linecap="round"/>
+  <path d="M100 120 L130 85" stroke="#1a5d3a" stroke-width="6" stroke-linecap="round"/>
+  <path d="M100 100 L85 70" stroke="#1a5d3a" stroke-width="4" stroke-linecap="round"/>
+  <path d="M100 100 L115 65" stroke="#1a5d3a" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="70" cy="80" r="25" fill="#1a5d3a" opacity="0.8"/>
+  <circle cx="130" cy="75" r="28" fill="#2d8a5e" opacity="0.8"/>
+  <circle cx="100" cy="55" r="30" fill="#1a5d3a" opacity="0.9"/>
+  <circle cx="85" cy="65" r="20" fill="#2d8a5e" opacity="0.7"/>
+  <circle cx="115" cy="60" r="22" fill="#1a5d3a" opacity="0.75"/>
 </svg>
-
